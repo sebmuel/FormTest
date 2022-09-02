@@ -1,0 +1,25 @@
+﻿<div class="welcome-dashboard" ng-controller="ActionDashboardController as vm">
+    <umb-box>
+        <umb-box-content>
+            <h3>{{ model.title }}</h3>
+            <div ng-repeat="prop in model.partner">
+                <div ng-if="prop.alias === 'aktionen'">
+                    <div ng-repeat="value in  prop.value">
+                        <h2>{{ value.aktionName }}</h2>
+                        <div ng-bind-html="value.aktionText"></div>
+                        <div class="wrapper">
+                            <p>Start: {{ value.aktionStart }}</p>
+                            <p>Ende: {{ value.aktionEnde }}</p>
+                        </div>
+                        <hr />
+                    </div>
+                </div>
+            </div>
+            <umb-button 
+                ng-click="model.close()"
+                button-style="action",
+                label="Close">
+            </umb-button>
+        </umb-box-content>
+    </umb-box>
+</div>

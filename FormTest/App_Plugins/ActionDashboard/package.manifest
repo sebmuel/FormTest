@@ -1,0 +1,20 @@
+{
+  "dashboards": [
+    {
+      "alias": "aktionDashboard",
+      "view": "/App_Plugins/ActionDashboard/ActionDashboard.html",
+      "sections": [ "content" ],
+      "weight": -10,
+      "access": [
+        { "deny": "translator" },
+        { "grant": "editor" }
+      ]
+    }
+  ],
+
+  "javascript": [
+    "/App_Plugins/ActionDashboard/actionDashboard.controller.js",
+    "/App_Plugins/ActionDashboard/openAktionDetail.controller.js"
+  ]
+
+}

@@ -1,0 +1,18 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+@{
+	Layout = "master.cshtml";
+}
+
+@* the fun starts here *@
+<section>
+    <div class="container">
+        @if (TempData["ContactSuccess"] != null && (bool)TempData["ContactSuccess"])
+        {
+            Html.RenderAction("SendEmail", "ContactSurface");
+        }
+        else
+        {
+            Html.RenderAction("RenderForm", "ContactSurface");
+        }
+    </div>
+</section>

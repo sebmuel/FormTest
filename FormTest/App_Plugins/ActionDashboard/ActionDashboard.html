@@ -1,0 +1,11 @@
+﻿<div class="welcome-dashboard" ng-controller="ActionDashboardController as vm">
+
+    <umb-box>
+        <umb-box-header title="Laufende Aktionen" description="Übersicht der laufenden Aktionen"></umb-box-header>
+        <umb-box-content>
+            <div ng-repeat="partner in vm.Partners">
+                <button type="button" ng-click="vm.open(partner)"> {{ partner.name }}</button>
+            </div>
+        </umb-box-content> 
+    </umb-box>
+</div>
